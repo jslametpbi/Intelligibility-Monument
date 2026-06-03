@@ -1,0 +1,17 @@
+SPOT QR DIRECT FIX
+
+This version keeps the full platform and fixes only:
+1. hotspot click in the 360 viewer
+2. automatic QR update in the right-side panel
+3. smoother auto-rotation
+4. removed the requested V5 text from the paragraph
+
+Upload only:
+index.html
+styles.css
+app.js
+manifest.webmanifest
+assets/
+UPLOAD_GUIDE.txt
+
+Delete old app-v*.js, styles-v*.css, and README.md first.
