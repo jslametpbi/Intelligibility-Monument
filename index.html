@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Intelligibility Monument</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css?v=final-clean-20260604" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home">
+      <span class="brand-mark">⌁</span>
+      <span><strong>The Intelligibility Monument</strong><em>Indonesian Voices in Global English</em></span>
+    </a>
+    <nav>
+      <a href="#home">Home</a>
+      <a class="active" href="#monument">Monument</a>
+      <a href="#voices">Voices</a>
+      <a href="#map">Voice Map</a>
+      <a href="#materials">Materials</a>
+      <a href="#qr">QR Station</a>
+      <a href="#dossier">Dossier</a>
+      <a href="#admin">Admin</a>
+    </nav>
+    <button id="themeBtn" class="pill">Theme</button>
+  </header>
+
+  <main class="shell">
+    <section id="monument" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">360 Digital Twin</p>
+          <h1>Rotate the Monument 360°</h1>
+          <p>Auto rotation starts automatically and moves slowly in a full 360° loop. You can also drag, use the slider, or click Rotate Left and Rotate Right. When a hotspot is clicked, the QR in the right-side panel changes automatically.</p>
+        </div>
+        <button class="primary" id="platformQrBtn">Platform QR</button>
+      </div>
+
+      <div class="viewer-card">
+        <div class="viewer-toolbar">
+          <button class="ghost" id="rotateLeft">Rotate Left</button>
+          <button class="primary" id="autoRotate">Stop Rotation</button>
+          <button class="ghost" id="rotateRight">Rotate Right</button>
+          <button class="ghost" id="resetRotation">Reset</button>
+          <button class="primary" id="selectedQrBtn">Selected Spot QR</button>
+        </div>
+
+        <div class="viewer-grid">
+          <div>
+            <div class="viewer" id="viewer">
+              <img id="viewerImg" class="viewer-img" src="assets/model/frame-01.png" alt="360 view of the monument" draggable="false" />
+              <div id="viewLabel" class="view-label">Front View · 0°</div>
+              <div id="hotspots" class="hotspots"></div>
+            </div>
+            <div class="slider-row">
+              <label>Rotation angle <strong id="angleLabel">0°</strong></label>
+              <input id="rotationSlider" type="range" min="0" max="360" value="0" />
+            </div>
+          </div>
+
+          <aside class="side-panel" id="sidePanel"></aside>
+        </div>
+      </div>
+
+      <div class="board-grid">
+        <div class="board">
+          <img src="assets/design-board.png" alt="Clickable design board" />
+          <div id="boardHotspots" class="board-hotspots"></div>
+        </div>
+        <aside class="detail-panel" id="detailPanel"></aside>
+      </div>
+    </section>
+
+    <section id="voices" class="section">
+      <div class="section-head">
+        <div><p class="eyebrow">National voice representation</p><h2>114 Voice Records from All Indonesian Provinces</h2><p>Three editable voice slots per province: student voice, academic voice, and community voice.</p></div>
+      </div>
+      <div id="voiceStats" class="stats"></div>
+      <div class="voice-tools"><input id="voiceSearch" placeholder="Search voices..." /><select id="provinceFilter"></select><select id="speakerFilter"><option value="all">All speaker types</option><option>Student Voice</option><option>Academic Voice</option><option>Community Voice</option></select></div>
+      <div id="voiceList" class="voice-list"></div>
+    </section>
+
+    <section id="map" class="section">
+      <p class="eyebrow">Interactive Indonesia voice map</p><h2>Province Voice Map</h2>
+      <div id="provinceMap" class="province-map"></div>
+    </section>
+
+    <section id="materials" class="section">
+      <p class="eyebrow">Materials and symbolism</p><h2>Integrated Monument Elements</h2>
+      <div id="materialsGrid" class="cards"></div>
+    </section>
+
+    <section id="qr" class="section">
+      <p class="eyebrow">QR Station</p><h2>QR Access Generator</h2>
+      <div class="qr-station"><select id="qrSelect"></select><div id="qrCard" class="qr-card"></div></div>
+    </section>
+
+    <section id="dossier" class="section">
+      <p class="eyebrow">Dossier</p><h2>International Recognition Dossier</h2>
+      <div id="dossierContent" class="dossier"></div>
+    </section>
+
+    <section id="admin" class="section">
+      <p class="eyebrow">Protected admin</p><h2>Admin Studio</h2>
+      <div id="adminGate" class="admin-card">
+        <label>Owner PIN <input id="pinInput" type="password" placeholder="Enter PIN" /></label>
+        <button id="unlockAdmin" class="primary">Unlock Admin</button>
+      </div>
+      <div id="adminPanel" class="admin-card" hidden>
+        <button id="lockAdmin" class="ghost">Lock Admin</button>
+        <p>Admin is unlocked. Default PIN: 2026. Use Export/Import for browser data backup.</p>
+        <button id="exportData" class="primary">Export Data</button>
+        <label class="file-label">Import Data <input id="importData" type="file" accept="application/json" /></label>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal" hidden>
+    <div class="modal-bg"></div>
+    <div class="modal-card">
+      <button id="closeModal" class="modal-close">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="app.js?v=final-clean-20260604"></script>
+</body>
+</html>

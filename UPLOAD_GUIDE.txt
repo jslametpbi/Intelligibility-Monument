@@ -1,0 +1,13 @@
+READY UPLOAD PACKAGE
+
+Upload these contents to GitHub after deleting old files:
+index.html
+styles.css
+app.js
+manifest.webmanifest
+assets/
+UPLOAD_GUIDE.txt
+
+There is intentionally NO README.md so GitHub will not show a README page.
+
+Default Admin PIN: 2026
