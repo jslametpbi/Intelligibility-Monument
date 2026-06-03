@@ -1,1 +1,0 @@
-final-fixed-v6: clean title, working rotation controls, right-side QR panel, standard app.js/styles.css
