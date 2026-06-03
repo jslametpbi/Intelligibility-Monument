@@ -1,0 +1,15 @@
+DELETE OLD FILES FIRST, then upload ONLY these items:
+
+index.html
+styles.css
+app.js
+manifest.webmanifest
+README.md
+UPLOAD_GUIDE.txt
+assets/
+
+Do not upload old app-v3/app-v4/app-v5 or styles-v3/styles-v4/styles-v5 files.
+
+After deployment: hard refresh the site.
+Mac: Cmd + Shift + R
+Windows: Ctrl + F5
