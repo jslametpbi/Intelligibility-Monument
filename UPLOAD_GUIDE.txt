@@ -1,0 +1,25 @@
+READY UPLOAD PACKAGE
+
+After deleting old files in GitHub, upload ONLY these items:
+
+1. index.html
+2. styles.css
+3. app.js
+4. manifest.webmanifest
+5. README.md
+6. VERSION-FINAL-FIXED.txt
+7. assets folder
+
+Do NOT upload old files such as:
+- app-v3.js
+- app-v4.js
+- app-v5.js
+- styles-v3.css
+- styles-v4.css
+- styles-v5.css
+
+After GitHub finishes deployment, open your website and hard refresh:
+Mac: Cmd + Shift + R
+Windows: Ctrl + F5
+
+Default Admin PIN: 2026
